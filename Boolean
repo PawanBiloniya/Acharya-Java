@@ -1,0 +1,18 @@
+
+public class Boolean {
+	public static void main(String[] args) {
+		
+		boolean flag=true;
+		boolean inactive= false;
+		
+		if (flag)
+		 {
+		
+		System.out.println("true");
+		
+		}
+		else System.out.println("false");
+		
+	}
+
+}
