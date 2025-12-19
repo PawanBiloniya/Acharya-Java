@@ -1,30 +1,40 @@
-import java.security.PublicKey;
+package Collage;
 
 public class Employee {
+	int id;
+	String name;
+	double basic_salary;
+	double hra;
+	double Ilt;
+	double da;
+	double pf;
+	double tax;
+	static String compayname ="Renu Enterprises";
+	
+	public Employee() {
 		
-		int id;
-		String name;
-		double salary;
-		public Employee(int id, String name, double salary) {
-			this.id = id;
-			this.name= name;
-			this.salary= salary;
-		}
-		
-		public void getSalary() {
-			System.out.println("The salary is : "+salary);}
-		public void getName() {
-			System.out.println("The name is :"+ name);
-			
-		}
-		public static void main(String[] args) {
-			Employee emp= new Employee(05, "Pawan", 83500.00);
-			System.out.println("Employee Id is :"+emp.id);
-			emp.getName();
-			Employee emp1 = new Employee(14, "Lokesh", 145000.00);
-			System.out.println("Employee id is :"+emp1.id);
-			emp1.getName();
-			
-		}
 	}
 
+	public Employee(int id, String name, double basic_salary, double hra, double ilt, double da, double pf,
+			double tax) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.basic_salary = basic_salary;
+		this.hra = hra;
+		Ilt = ilt;
+		this.da = da;
+		this.pf = pf;
+		this.tax = tax;
+	}
+	public void computerSalary() {
+		double netSalary= basic_salary+hra+Ilt+da+pf-tax;
+		System.out.println("The net salary of  "+id+"Who Name Is "+netSalary);
+		
+	}
+
+	public void computeSalary() {
+		// TODO Auto-generated method stub
+		
+	}
+}
