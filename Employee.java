@@ -1,40 +1,25 @@
-package Collage;
+package Anudip;
 
 public class Employee {
-	int id;
-	String name;
-	double basic_salary;
-	double hra;
-	double Ilt;
-	double da;
-	double pf;
-	double tax;
-	static String compayname ="Renu Enterprises";
+	protected int id;
+	protected int age;
+	protected String name;
+	protected boolean isPermanent;
 	
-	public Employee() {
-		
+	public void displayDetails() {
+		System.out.println("Employee ID: "+ id);
+		System.out.println("Employee Name: "+ name);
+		System.out.println("Employee Age: "+ age);
+		System.out.println("Is Permanent: "+ isPermanent);
+	}
+	public static void main(String[] args) {
+		Employee emp= new Employee();
+		emp.id= 1001;
+		emp.name= "Meera";
+		emp.age= (int) 20;
+		emp.isPermanent= true;
+		emp.displayDetails();
+		System.out.println("Successfully Started");
 	}
 
-	public Employee(int id, String name, double basic_salary, double hra, double ilt, double da, double pf,
-			double tax) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.basic_salary = basic_salary;
-		this.hra = hra;
-		Ilt = ilt;
-		this.da = da;
-		this.pf = pf;
-		this.tax = tax;
-	}
-	public void computerSalary() {
-		double netSalary= basic_salary+hra+Ilt+da+pf-tax;
-		System.out.println("The net salary of  "+id+"Who Name Is "+netSalary);
-		
-	}
-
-	public void computeSalary() {
-		// TODO Auto-generated method stub
-		
-	}
 }

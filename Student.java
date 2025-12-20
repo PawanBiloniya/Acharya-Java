@@ -1,38 +1,40 @@
-
-public class Student {
-	int id;
-	String firstname;
-	String lastname;
-	double fees;
-	public Student(int id, String firstname, String lastname, double fees) {
-		this.id= id;
-		this.firstname= firstname;
-		this.lastname= lastname;
-		this.fees= fees;
+package Anudip;
+public class Student{
+	
+	private String studentName;
+	private String collegeName;
+	private int studentID;
+	public void setStudentName(String name) {
+		this.studentName= name;
 	}
-	public void getString() {
-		System.out.println("This name is :"+ firstname + "" + lastname);
-		
+	public void setCollegeName(String college) {
+		this.collegeName= college;
 	}
-	public void getfees() {
-		System.out.println("This fees is :"+ fees);
+	public void setStudentId(int ID) {
+		this.studentID= ID;
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+	public String getCollegeName() {
+		return collegeName;
+	}
+	public int getStudentID() {
+		return studentID;
+	}
+	public void displayDetails() {
+		System.out.println("Student ID: " + studentID);
+		System.out.println("Student Name: " + studentName);
+		System.out.println("College Name: " + collegeName);
 	}
 	public static void main(String[] args) {
-		Student stu= new Student(31, "Pawan","Biloniya" ,52500);
-		System.out.println("Student Id is :"+stu.id);
-		stu.getString();
-		stu.getfees();
+		Student s1 = new Student();
+		s1.setStudentId(101);
+		s1.setStudentName("Pawan Biloniya");
+		s1.setCollegeName("Anudip Foundation");
+		s1.displayDetails();
+		System.out.println("Successful");
 		
-		Student stu1= new Student(52, "Lokesh","Biloniya" ,32000);
-		System.out.println("Student Id is :"+stu1.id);
-		stu1.getString();
-		stu1.getfees();
-		
-		Student stu2= new Student(66, "Golu","Jonlia" ,64000);
-		System.out.println("Student Id is :"+stu2.id);
-		stu2.getString();
-		stu2.getfees();
-
 		
 	}
 }
